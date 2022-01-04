@@ -13,6 +13,6 @@ namespace ShopApp.Entities
 
         public List<ProductCategory> ProductCategorys { get; set; }
 
-        Console.WriteLine("inş olur bay");
+        Console.WriteLine("inş olu");
     }
 }
