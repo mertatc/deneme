@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using ShopApp.Business.Abstract;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using ShopApp.Business.Abstract;
+
 
 namespace ShopApp.WebUI.Controllers
 {
@@ -19,7 +20,7 @@ namespace ShopApp.WebUI.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            return View(_productService.GetAll());
         }
     }
 }

@@ -30,7 +30,14 @@ namespace ShopApp.Business.Concrete
 
         public List<Product> GetAll()
         {
-            return _productDal.GetAll().ToList();
+            var products = new List<Product>()
+            {
+                new Product() { Id = 1, Name = "SAMSUNG", ImageUrl = "1.jpg", Price = 1000 },
+                new Product() { Id = 1, Name = "SAMSUNG", ImageUrl = "1.jpg", Price = 1000 },
+                new Product() { Id = 1, Name = "SAMSUNG", ImageUrl = "1.jpg", Price = 1000 },
+            };
+
+            return products;
         }
 
         public Product GetById(int id)
