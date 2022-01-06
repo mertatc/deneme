@@ -15,12 +15,12 @@ namespace ShopApp.WebUI.Controllers
         
         public HomeController(IProductService productService)
         {
-            _productService = productService     //Şuan sadece IProductServices tanımlı.
+            _productService = productService;    //Şuan sadece IProductServices tanımlı.
                                                  //IProductServices'i çağırdığımız da zaten IProductManager gelicek(Startup.cs 30.satır).
         }
         public IActionResult Index()
         {
-            return View();
+            return View(_productService.GetAll());  //productService üzrinden Getall yaparsak, memory üzerinde bilgiler gelecektir
         }
     }
 }
