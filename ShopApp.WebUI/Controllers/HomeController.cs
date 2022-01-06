@@ -20,7 +20,7 @@ namespace ShopApp.WebUI.Controllers
         }
         public IActionResult Index()
         {
-            return View(_productService.GetAll());  //productService üzrinden Getall yaparsak, memory üzerinde bilgiler gelecektir
+            return View();
         }
     }
 }
